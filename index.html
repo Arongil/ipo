@@ -365,21 +365,22 @@ section { margin: 0; }
 .fn-ref:hover, .fn-ref:focus-visible { text-decoration: underline; }
 
 .footnote {
-    max-width: 30rem;
-    margin: clamp(2.75rem, 7vw, 4rem) auto 0;
+    margin: clamp(2.75rem, 7vw, 4rem) 0 0;
     padding-top: clamp(1.1rem, 3vw, 1.4rem);
     border-top: 1px solid var(--rule);
     scroll-margin-top: 2rem;
+    text-align: left;
 }
 
+/* Set as fine print, matching the prospectus line below it — the
+   explanation and the joke are the same register. */
 .fn-body {
     margin: 0;
-    text-align: center;
-    font-size: clamp(0.98rem, 3vw, 1.08rem);
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--ink-soft);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 2;
+    color: #c3b391;
 }
 
 .fn-back {
@@ -401,16 +402,13 @@ section { margin: 0; }
 }
 
 .prospectus {
-    margin: clamp(1.5rem, 4vw, 2rem) 0 0;
-    text-align: center;
+    margin: clamp(1.1rem, 3vw, 1.5rem) 0 0;
+    text-align: left;
     font-size: 0.66rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #c3b391;
     line-height: 2;
-    max-width: 26rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* ── Print: one clean sheet ──────────────────────────────── */
