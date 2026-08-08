@@ -45,6 +45,10 @@
 
 html { font-size: 16px; -webkit-text-size-adjust: 100%; }
 
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -334,8 +338,70 @@ section { margin: 0; }
     color: var(--ink-soft);
 }
 
+/* ── Footnote ────────────────────────────────────────────── */
+
+/* The ∗ beside "Initial Parashah Offering" */
+.fn-ref {
+    font-size: 0.55em;
+    font-style: normal;
+    vertical-align: 0.62em;
+    color: var(--gold);
+    text-decoration: none;
+    /* Padding gives a thumb-sized tap target; the negative margins pull
+       the glyph back beside the word so it reads as a footnote mark. */
+    padding: 0.5em 0.4em;
+    margin: 0 -0.4em 0 -0.22em;
+    position: relative;
+}
+
+/* Widen the hit area to something thumb-sized without shifting layout —
+   the glyph itself is only ~17px wide. */
+.fn-ref::after {
+    content: "";
+    position: absolute;
+    inset: -0.6rem -0.75rem;
+}
+
+.fn-ref:hover, .fn-ref:focus-visible { text-decoration: underline; }
+
+.footnote {
+    max-width: 30rem;
+    margin: clamp(2.75rem, 7vw, 4rem) auto 0;
+    padding-top: clamp(1.1rem, 3vw, 1.4rem);
+    border-top: 1px solid var(--rule);
+    scroll-margin-top: 2rem;
+}
+
+.fn-body {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(0.98rem, 3vw, 1.08rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+.fn-back {
+    color: var(--gold);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.fn-back:hover, .fn-back:focus-visible { text-decoration: underline; }
+
+/* A brief glow when you land on the footnote, so the jump is legible */
+@media (prefers-reduced-motion: no-preference) {
+    .footnote:target .fn-body { animation: settle 1.6s ease-out both; }
+}
+
+@keyframes settle {
+    0%, 35% { color: var(--ink); }
+    100%    { color: var(--ink-soft); }
+}
+
 .prospectus {
-    margin: clamp(2.5rem, 6vw, 3.5rem) 0 0;
+    margin: clamp(1.5rem, 4vw, 2rem) 0 0;
     text-align: center;
     font-size: 0.66rem;
     letter-spacing: 0.16em;
@@ -354,6 +420,7 @@ section { margin: 0; }
     .invitation { border: none; min-height: 0; padding: 0.5in; max-width: none; }
     .details { background: #fff; }
     .prospectus { color: #bbb; }
+    .footnote { border-top-color: #ddd; }
 }
 
 /* ── Motion: a quiet fade-up on load ─────────────────────── */
@@ -392,7 +459,7 @@ section { margin: 0; }
         <p class="invited smallcaps">You are invited</p>
 
         <h1>Laker<span class="apos">&rsquo;</span>s IPO</h1>
-        <p class="expansion">Initial Parashah Offering</p>
+        <p class="expansion">Initial Parashah Offering<a class="fn-ref" id="fnref" href="#footnote" aria-label="Footnote: what an Initial Parashah Offering is">&lowast;</a></p>
 
         <p class="occasion">A bar mitzvah</p>
 
@@ -508,13 +575,23 @@ section { margin: 0; }
             <li><span class="who">Rabbi David Fohrman</span><span class="why">for showing me that Torah study is a living field, with some things to say about artificial intelligence</span></li>
         </ul>
 
-        <!-- A light touch on the conceit. Delete the whole <p> if you'd
-             rather end on the line above. -->
+    </section>
+
+    <!-- ══════════════ FOOTNOTE ══════════════
+         Target of the ∗ beside "Initial Parashah Offering". Explains the
+         pun, and carries the prospectus joke as its closing line.
+    ═══════════════════════════════════════════ -->
+    <aside class="footnote fade d4" id="footnote">
+        <p class="fn-body">
+            <a class="fn-back" href="#fnref" aria-label="Back to the top of the invitation">&lowast;</a>
+            Just like a company that offers shares to the public becomes a public company, a first reading from the Torah scroll to the public is part of the Bar Mitzvah ceremony to become a Jewish adult.
+        </p>
+
         <p class="prospectus">
             No shares offered or sold &middot; Dividends paid in joy<br>
             Past performance is no guarantee of future Torah
         </p>
-    </section>
+    </aside>
 
 </article>
 </body>
