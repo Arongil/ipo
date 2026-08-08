@@ -1,0 +1,71 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Laker's IPO//Initial Parashah Offering//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Laker's IPO
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:torah-reading@ipo.lakernewhouse.com
+SEQUENCE:0
+DTSTAMP:20260808T000000Z
+DTSTART;TZID=America/Los_Angeles:20261024T100000
+DTEND;TZID=America/Los_Angeles:20261024T133000
+SUMMARY:Laker's Torah reading — Laker's IPO
+LOCATION:San Francisco Chabad\, 873 Sutter Street\, San Francisco\, CA 9410
+ 9
+DESCRIPTION:Shacharit services begin at 10:00 AM. Laker's Torah reading fal
+ ls during the morning service.\n\nhttps://ipo.lakernewhouse.com
+URL:https://ipo.lakernewhouse.com
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:kiddush-lunch@ipo.lakernewhouse.com
+SEQUENCE:0
+DTSTAMP:20260808T000000Z
+DTSTART;TZID=America/Los_Angeles:20261024T133000
+DTEND;TZID=America/Los_Angeles:20261024T150000
+SUMMARY:Kiddush lunch — Laker's IPO
+LOCATION:San Francisco Chabad\, 873 Sutter Street\, San Francisco\, CA 9410
+ 9
+DESCRIPTION:Kiddush lunch following the morning service.\n\nhttps://ipo.lak
+ ernewhouse.com
+URL:https://ipo.lakernewhouse.com
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:dinner@ipo.lakernewhouse.com
+SEQUENCE:0
+DTSTAMP:20260808T000000Z
+DTSTART;TZID=America/Los_Angeles:20261024T180000
+DTEND;TZID=America/Los_Angeles:20261024T220000
+SUMMARY:Dinner and celebration — Laker's IPO
+LOCATION:Somewhere in San Francisco
+DESCRIPTION:Venue to be announced. Check https://ipo.lakernewhouse.com clos
+ er to the day.\n\nhttps://ipo.lakernewhouse.com
+URL:https://ipo.lakernewhouse.com
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
