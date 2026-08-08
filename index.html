@@ -262,6 +262,16 @@ section { margin: 0; }
     white-space: nowrap;
 }
 
+.schedule dt .time {
+    display: block;
+    margin-top: 0.1rem;
+    font-size: 0.92em;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    font-weight: 400;
+    color: var(--ink-soft);
+}
+
 .schedule dd {
     margin: 0;
     padding-top: 0.32em;
@@ -520,7 +530,7 @@ section { margin: 0; }
             <h2>Saturday, October 24th, 2026</h2>
 
             <dl class="schedule">
-                <dt>Morning</dt>
+                <dt>Morning<span class="time">10:00 AM</span></dt>
                 <dd>
                     Laker&rsquo;s Torah reading
                     <span class="where">San Francisco Chabad &middot; 873 Sutter Street</span>
@@ -528,7 +538,7 @@ section { margin: 0; }
 
                 <div class="divider"></div>
 
-                <dt>Midday</dt>
+                <dt>Midday<span class="time">Around 1:30 PM</span></dt>
                 <dd>
                     Kiddush lunch
                     <span class="where">San Francisco Chabad &middot; 873 Sutter Street</span>
@@ -543,7 +553,7 @@ section { margin: 0; }
 
                 <div class="divider"></div>
 
-                <dt>Evening</dt>
+                <dt>Evening<span class="time">6:00 PM</span></dt>
                 <dd>
                     Dinner and celebration
                     <span class="where">Location to be announced &mdash; somewhere in San Francisco</span>
