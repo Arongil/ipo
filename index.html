@@ -14,7 +14,7 @@
 <meta name="robots" content="noindex, nofollow">
 
 <meta property="og:title" content="Laker's IPO — Initial Parashah Offering">
-<meta property="og:description" content="A bar mitzvah in San Francisco. Saturday, the twenty-fourth of October, two thousand twenty-six.">
+<meta property="og:description" content="A bar mitzvah in San Francisco. Saturday, October 24th, 2026.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipo.lakernewhouse.com">
 <meta name="twitter:card" content="summary">
@@ -144,8 +144,6 @@ h1 .apos { letter-spacing: 0; }
     line-height: 1.45;
 }
 
-.date-line .em { font-style: italic; }
-
 .place-line {
     margin: 0.35rem 0 0;
     font-size: clamp(1.35rem, 4.6vw, 1.85rem);
@@ -175,12 +173,23 @@ section { margin: 0; }
 
 .prose p:last-child { margin-bottom: 0; }
 
-.prose .verse { margin-bottom: 1.4rem; }
+/* The Lech Lecha verse, set off inside the note like an epigraph */
+.prose .verse {
+    margin: 1.6rem 0;
+    padding: 0 0 0 clamp(1rem, 3vw, 1.5rem);
+    border-left: 1px solid var(--gold-pale);
+}
+
+.prose .verse p {
+    margin: 0;
+    font-size: 1.06em;
+    line-height: 1.55;
+    color: var(--ink);
+}
 
 .prose .verse .cite {
     display: block;
-    margin-top: 0.4rem;
-    text-align: right;
+    margin-top: 0.5rem;
     font-size: 0.68rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -191,30 +200,6 @@ section { margin: 0; }
     text-align: right;
     font-style: italic;
     margin-top: 1.6rem;
-}
-
-/* Author's-note blocks — see README note: delete class="draft"
-   (and the little tab) once the real words are in. */
-.draft {
-    position: relative;
-    border: 1px dashed var(--gold-pale);
-    border-radius: 2px;
-    padding: clamp(1.5rem, 4vw, 2rem) clamp(1.25rem, 4vw, 1.75rem) clamp(1.25rem, 3vw, 1.5rem);
-    color: var(--ink-soft);
-}
-
-.draft::before {
-    content: "draft";
-    position: absolute;
-    top: -0.62rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fffdf8;
-    padding: 0 0.6rem;
-    font-size: 0.6rem;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--gold-pale);
 }
 
 /* ── The details block ───────────────────────────────────── */
@@ -310,13 +295,41 @@ section { margin: 0; }
 
 /* ── Closing ─────────────────────────────────────────────── */
 
-.closing {
+.thanks-intro {
+    margin: 0 0 clamp(1.4rem, 4vw, 1.9rem);
     text-align: center;
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-size: clamp(1.15rem, 3.8vw, 1.35rem);
     font-weight: 300;
     font-style: italic;
-    line-height: 1.5;
-    margin: 0;
+}
+
+.thanks {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 30rem;
+    text-align: center;
+}
+
+.thanks li + li { margin-top: 1.15rem; }
+
+.thanks .who {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--gold);
+}
+
+.thanks .why {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: clamp(1.05rem, 3.3vw, 1.18rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.45;
+    color: var(--ink-soft);
 }
 
 .prospectus {
@@ -337,8 +350,6 @@ section { margin: 0; }
 @media print {
     body { background: #fff; font-size: 11.5pt; }
     .invitation { border: none; min-height: 0; padding: 0.5in; max-width: none; }
-    .draft { border-color: #ccc; }
-    .draft::before { color: #ccc; background: #fff; }
     .details { background: #fff; }
     .prospectus { color: #bbb; }
 }
@@ -384,8 +395,7 @@ section { margin: 0; }
         <p class="occasion">A bar mitzvah</p>
 
         <p class="date-line">
-            Saturday, the twenty-fourth of October<br>
-            <span class="em">two thousand twenty-six</span>
+            Saturday, October 24th, 2026
         </p>
         <p class="place-line">San Francisco</p>
 
@@ -402,39 +412,32 @@ section { margin: 0; }
     </svg>
 
     <!-- ══════════════ A NOTE FROM LAKER ══════════════
-         ✍️  Write your paragraph here. When it's ready, delete
-             class="draft" from the <div> below so the dashed
-             frame and the little "draft" tab disappear.
+         Carries the Lech Lecha quote inline, at the point where the
+         note first reaches for the story — so there's no separate
+         parashah section repeating it.
+         (24 Oct 2026 = 13 Cheshvan 5787 = Parashat Lech Lecha,
+          Genesis 12:1–17:27.)
     ═══════════════════════════════════════════════════ -->
     <section class="fade d1">
         <p class="section-label smallcaps">A note from Laker</p>
 
-        <div class="prose draft">
-            <p>Your paragraph goes here &mdash; the one you want to say in your own voice. A few sentences on what this day means to you, why these particular people are the ones you want in the room, and what you hope the day feels like.</p>
-            <p>Two or three paragraphs is plenty. It will read beautifully at this width.</p>
+        <div class="prose">
+            <p>Thank you all so much for helping to form who I am.</p>
+
+            <blockquote class="verse">
+                <p><em>&ldquo;Lech lecha &mdash; go forth from your land, from your birthplace, from your father&rsquo;s house, to the land that I will show you.&rdquo;</em></p>
+                <span class="cite">Genesis 12:1</span>
+            </blockquote>
+
+            <p>The story of God telling Abraham to leave everything he knows, for a land that God will show him, seems relevant to our moment. In line with the punnery of calling this bar mitzvah an IPO: Abraham made one of history&rsquo;s first recorded ventures, placing his convictions in both himself and in God &mdash; that striking out on a very new and different path could work out better than anything that would come of staying put in what he knew.</p>
+
+            <p>Today we are living through a similar moment with artificial intelligence (AI). We are moving beyond what we know, and we will certainly have many trials on our way to a bright future.</p>
+
+            <p>That is why I would be so delighted to have you in the room. Together, you are a community of family and friends who have made me who I am, and who are thoughtful and kind. I hope this Saturday, October 24th, feels both comforting in the ancient stories we will retell and engaging in the questions about our future that we can take up together.</p>
+
+            <p>I hope you can make it.</p>
+
             <p class="signature">&mdash; Laker</p>
-        </div>
-    </section>
-
-    <svg class="ornament ornament--sm" width="160" height="14" viewBox="0 0 160 14" fill="none" aria-hidden="true">
-        <path d="M4 7h62" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"/>
-        <path d="M156 7h-62" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"/>
-        <circle cx="80" cy="7" r="1.8" fill="currentColor"/>
-    </svg>
-
-    <!-- ══════════════ THE PARASHAH ══════════════
-         ✍️  Same here: write your short segment, then remove
-             class="draft".
-         NOTE: 24 Oct 2026 = 13 Cheshvan 5787 = Parashat Lech Lecha
-               (Genesis 12:1 – 17:27). Verified against the
-               Hebrew calendar.
-    ═══════════════════════════════════════════════ -->
-    <section class="fade d2">
-        <p class="section-label smallcaps">The parashah &middot; Lech Lecha</p>
-
-        <div class="prose draft">
-            <p class="verse"><em>&ldquo;Lech lecha &mdash; go forth from your land, from your birthplace, from your father&rsquo;s house, to the land that I will show you.&rdquo;</em><span class="cite">Genesis 12:1</span></p>
-            <p>Your short segment on the parashah goes here: what you found in it, what you plan to say about it, or simply why it is the one you get to read.</p>
         </div>
     </section>
 
@@ -449,12 +452,12 @@ section { margin: 0; }
     <!-- ══════════════ THE DETAILS ══════════════ -->
     <section class="details fade d3">
         <div class="details-inner">
-            <h2>The day &middot; Saturday, October 24th, 2026</h2>
+            <h2>Saturday, October 24th, 2026</h2>
 
             <dl class="schedule">
                 <dt>Morning</dt>
                 <dd>
-                    Torah reading
+                    Laker&rsquo;s Torah reading
                     <span class="where">San Francisco Chabad &middot; 873 Sutter Street</span>
                 </dd>
 
@@ -462,7 +465,7 @@ section { margin: 0; }
 
                 <dt>Midday</dt>
                 <dd>
-                    A community lunch, immediately afterward
+                    Kiddush lunch
                     <span class="where">San Francisco Chabad &middot; 873 Sutter Street</span>
                 </dd>
 
@@ -470,7 +473,7 @@ section { margin: 0; }
 
                 <dt>Afternoon</dt>
                 <dd>
-                    A break &mdash; rest, wander, be in the city
+                    A break &mdash; no scheduled events
                 </dd>
 
                 <div class="divider"></div>
@@ -478,11 +481,11 @@ section { margin: 0; }
                 <dt>Evening</dt>
                 <dd>
                     Dinner and celebration
-                    <span class="where">To be announced &mdash; somewhere in San Francisco</span>
+                    <span class="where">Location to be announced &mdash; somewhere in San Francisco</span>
                 </dd>
             </dl>
 
-            <p class="details-note">Times and the evening&rsquo;s address will follow closer to the day.</p>
+            <p class="details-note">We are currently selecting the venue and will share more details soon.</p>
         </div>
     </section>
 
@@ -492,9 +495,17 @@ section { margin: 0; }
         <circle cx="80" cy="7" r="1.8" fill="currentColor"/>
     </svg>
 
-    <!-- ══════════════ CLOSING ══════════════ -->
+    <!-- ══════════════ CLOSING · THANK YOUS ══════════════ -->
     <section class="fade d4">
-        <p class="closing">Come celebrate.<br>It would not be the same without you.</p>
+        <p class="thanks-intro">Thank you in particular to the following people:</p>
+
+        <ul class="thanks">
+            <li><span class="who">Debbie and Eric Newhouse</span><span class="why">for always supporting me</span></li>
+            <li><span class="who">Rabbi Shmulik Friedman</span><span class="why">for offering his space for this event</span></li>
+            <li><span class="who">Mog Hillel</span><span class="why">for encouraging me to make it happen</span></li>
+            <li><span class="who">Moshe Fohrman</span><span class="why">for teaching me the system of cantillation (sometimes called leining)</span></li>
+            <li><span class="who">Rabbi David Fohrman</span><span class="why">for showing me that Torah study is a living field, with interesting things to say about artificial intelligence</span></li>
+        </ul>
 
         <!-- A light touch on the conceit. Delete the whole <p> if you'd
              rather end on the line above. -->
