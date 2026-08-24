@@ -26,17 +26,18 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:torah-reading@ipo.lakernewhouse.com
-SEQUENCE:1
-DTSTAMP:20260814T000000Z
+SEQUENCE:2
+DTSTAMP:20260820T000000Z
 DTSTART;TZID=America/Los_Angeles:20261024T100000
 DTEND;TZID=America/Los_Angeles:20261024T130000
 SUMMARY:Laker's Torah reading — Laker's IPO
 LOCATION:San Francisco Chabad\, 873 Sutter Street\, San Francisco\, CA 9410
  9
 DESCRIPTION:Shacharit services begin at 10:00 AM. Laker's Torah reading fal
- ls during the morning service.\n\nMay be long. Some people may prefer to 
- come only in the evening. If you come: no phones!\n\nhttps://ipo.lakernew
- house.com
+ ls during the morning service.\n\nMay be long and boring. Unless you're s
+ pecifically interested in services\, many people will prefer to come only
+  in the evening. If you do come: no phones!\n\nhttps://ipo.lakernewhouse.
+ com
 URL:https://ipo.lakernewhouse.com
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -44,7 +45,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:kiddush-lunch@ipo.lakernewhouse.com
 SEQUENCE:1
-DTSTAMP:20260814T000000Z
+DTSTAMP:20260820T000000Z
 DTSTART;TZID=America/Los_Angeles:20261024T130000
 DTEND;TZID=America/Los_Angeles:20261024T140000
 SUMMARY:Kiddush lunch — Laker's IPO
