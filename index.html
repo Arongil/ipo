@@ -364,6 +364,70 @@ section { margin: 0; }
     color: #6f5520;
 }
 
+/* ── Where to stay ────────────────────────────────────────── */
+
+.stay {
+    max-width: 30rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stay .hotel {
+    margin: 0;
+    font-size: clamp(1.35rem, 4.4vw, 1.65rem);
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.stay .rate {
+    margin: 0.35rem 0 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--gold);
+}
+
+.stay .stay-how {
+    margin: clamp(1.1rem, 3vw, 1.4rem) 0 0;
+    font-size: clamp(1.05rem, 3.3vw, 1.15rem);
+    line-height: 1.55;
+}
+
+.stay .stay-how em { font-style: italic; }
+
+/* Booking is by phone, so make the number the obvious thing to tap */
+.stay-tel {
+    margin: clamp(1rem, 3vw, 1.3rem) 0 0;
+}
+
+.stay-tel a {
+    display: inline-block;
+    padding: 0.45em 1.1em;
+    border: 1px solid var(--gold-pale);
+    border-radius: 2px;
+    font-size: clamp(1.1rem, 3.6vw, 1.28rem);
+    letter-spacing: 0.04em;
+    color: var(--gold);
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.stay-tel a:hover, .stay-tel a:focus-visible {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fffdf8;
+}
+
+.stay .stay-note {
+    margin: clamp(1.2rem, 3vw, 1.5rem) 0 0;
+    font-size: clamp(0.98rem, 3vw, 1.06rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.55;
+    color: var(--ink-soft);
+}
+
 /* ── Add to calendar ─────────────────────────────────────── */
 
 .add-cal {
@@ -613,6 +677,37 @@ section { margin: 0; }
                  which is the good experience. Desktop browsers save it. -->
             <p class="add-cal">
                 <a href="/ipo.ics">Add to calendar</a>
+            </p>
+        </div>
+    </section>
+
+    <svg class="ornament ornament--sm" width="160" height="14" viewBox="0 0 160 14" fill="none" aria-hidden="true">
+        <path d="M4 7h62" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"/>
+        <path d="M156 7h-62" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"/>
+        <circle cx="80" cy="7" r="1.8" fill="currentColor"/>
+    </svg>
+
+    <!-- ══════════════ WHERE TO STAY ══════════════
+         Block rate at the Grand Hyatt. The phone number is a tel: link so
+         a guest on a phone can just tap it — booking is by phone only.
+    ═══════════════════════════════════════════════ -->
+    <section class="fade d3">
+        <p class="section-label smallcaps">Where to stay</p>
+
+        <div class="stay">
+            <p class="hotel">Grand Hyatt San Francisco</p>
+            <p class="rate">$199 per night, plus taxes and fees</p>
+
+            <p class="stay-how">
+                Call and ask for the <em>Laker Newhouse Bar Mitzvah</em> rate, available
+                Thursday, Friday and Saturday nights &mdash; October 22nd to 24th.
+            </p>
+
+            <p class="stay-tel"><a href="tel:+14153981234">(415)&nbsp;398-1234</a></p>
+
+            <p class="stay-note">
+                The hotel is in the middle between Chabad and Wayfare Tavern.
+                Parking runs $65&ndash;95 a day, so we recommend Ubers.
             </p>
         </div>
     </section>
